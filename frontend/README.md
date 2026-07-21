@@ -19,6 +19,7 @@ Every skill has a **Template** banner: copy → resolve `ADAPT:` → defaults ar
 | `loading-ux` | Both | Shared loader + in-control pending |
 | `clean-modular-responsibilities` | Both | No inner components/hooks in pages |
 | `atomic-shared-ui` | Panel (useful anywhere) | Prefer shared DS primitives |
+| `create-form` | Both | Zod + RHF + zodResolver forms |
 
 ## Rules
 
@@ -37,6 +38,8 @@ Copy `.mdc` files into the project's `.cursor/rules/`. Templates ship with `alwa
 | `loading-action-button.mdc` | In-control loader |
 | `clean-modular-responsibilities.mdc` | Anti-inner-components |
 | `atomic-components.mdc` | Shared UI roles |
+| `forms-rhf-zod.mdc` | Zod + RHF + zodResolver |
+| `theming-tokens.mdc` | Multi-preset `data-theme` tokens |
 
 ## Complement (from `global/skills/` — do not duplicate bodies)
 

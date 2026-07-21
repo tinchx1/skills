@@ -66,11 +66,12 @@ Rules: `project-conventions`, `react-components`, `next-pages`, `styling-scss` *
 | Skill | Role |
 |-------|------|
 | `panel-spa-architecture` | Features, roles, thin routes |
+| `create-form` | Zod + RHF + zodResolver |
 | `react-query` | Client server-state |
 | `atomic-shared-ui` | Prefer shared DS primitives |
 | `loading-ux` / `clean-modular-responsibilities` | UX + structure |
 
-Rules: `panel-spa` (+ Query / atomic / loading as needed). Do not enable Next Screaming + panel SPA `alwaysApply` together blindly.
+Rules: `panel-spa`, `forms-rhf-zod`, `theming-tokens` (+ Query / atomic / loading as needed). Do not enable Next Screaming + panel SPA `alwaysApply` together blindly.
 
 ## Backend starter pack
 

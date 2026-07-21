@@ -66,10 +66,12 @@ Do not mix both styling systems in one component.
 
 ## Forms (ADAPT)
 
+Complex / validated forms → skill **`create-form`** (Zod + RHF + `zodResolver`).
+
 | Kind | Suggested approach |
 |------|--------------------|
-| Multi-step / complex | Form lib + schema in feature (`validations/`) |
-| Simple | Server action / progressive enhancement + schema |
+| Multi-step / complex | `create-form` — schema in `schemas/` |
+| Simple uncontrolled | Native input; no form lib |
 
 User-visible validation messages follow app locale (`error-handling`).
 

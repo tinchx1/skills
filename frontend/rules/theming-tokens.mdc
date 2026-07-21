@@ -1,0 +1,22 @@
+---
+description: Multi-preset theming — semantic CSS tokens + data-theme registry (tweakcn)
+globs: "**/*.{css,tsx,ts}"
+alwaysApply: false
+---
+
+# Theming tokens (ADAPT)
+
+Each preset is a full look (light *or* dark embedded). Users pick a preset; there is **no** separate light/dark toggle on the same pack.
+
+## Structure
+
+- CSS vars under `[data-theme="<id>"]` in `shared/styles/themes/<id>.css`
+- Tailwind maps semantic colors to `var(--*)` once (`tokens.css` / `@theme`)
+- Registry: `shared/theme/registry.ts` — `{ id, label, colorScheme }`
+- Runtime: `data-theme` on `<html>` + `class="dark"` only when `colorScheme === 'dark'`
+
+## Rules
+
+- Components use semantic classes only (`bg-background`, `text-primary`, `border-border`) — never brand hex / `bg-blue-500`
+- Add a theme: new CSS file + registry row (+ fonts). Do not fork Button/Table per theme
+- Do not use `.dark {…}` as the theme identity — normalize tweakcn exports to `[data-theme="…"]`

@@ -1,0 +1,24 @@
+---
+description: Forms — Zod schema + react-hook-form + zodResolver only (ADAPT paths)
+globs: "**/domain/**/{components,pages,schemas}/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Forms — RHF + Zod + zodResolver (ADAPT)
+
+Stack fijo:
+
+- `zod` — schemas in `domain/<x>/schemas/` (or `features/<x>/schemas/`)
+- `react-hook-form` — form state
+- `@hookform/resolvers/zod` — `zodResolver(schema)` as the only client validation bridge
+- DS Form primitives (shadcn `Form` / project equivalent)
+
+## Rules
+
+- Types from `z.infer` — do not hand-duplicate schema shapes
+- No parallel manual validation that repeats the schema
+- Shared schemas only when 2+ domains share the contract
+- Submit via domain mutation/API hooks — not raw fetch inside the form
+- User-visible messages follow app locale (`error-handling`)
+
+Skill: `create-form`.

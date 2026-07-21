@@ -38,9 +38,12 @@ Copy `.mdc` files into the project's `.cursor/rules/`. Templates ship with `alwa
 | `clean-modular-responsibilities.mdc` | Anti-inner-components |
 | `atomic-components.mdc` | Shared UI roles |
 
-## Complement (do not duplicate)
+## Complement (from `global/skills/` — do not duplicate bodies)
+
+Copy into the project; reference by name:
 
 - `error-handling` — user-facing errors, locale, no leaks
 - `api-contracts` — BFF/route handler contracts
 - `security-engineering` — auth on server, no secrets in public env
 - `verification-loop` — lint/test/build evidence
+- `eng-intake` / `documentation-update` / `agents-md-authoring` / `technical-research` as needed

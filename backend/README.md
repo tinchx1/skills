@@ -21,9 +21,12 @@ Templates ship with `alwaysApply: false` — enable in the target API repo.
 | `backend-conventions.mdc` | Structure reminders |
 | `http-handlers.mdc` | Thin handlers / boundary validation |
 
-## Complement (do not duplicate)
+## Complement (from `global/skills/` — do not duplicate bodies)
+
+Copy into the project; reference by name:
 
 - `error-handling` — domain errors, ORM mapping, Problem Details
 - `api-contracts` — OpenAPI, pagination, idempotency
 - `security-engineering` — authz on resource, secrets
 - `verification-loop` — tests/typecheck evidence
+- `eng-intake` / `documentation-update` / `agents-md-authoring` / `technical-research` as needed

@@ -1,0 +1,36 @@
+---
+description: Panel SPA — features/roles/routes, server vs client state (ADAPT stack)
+alwaysApply: false
+---
+
+# Panel SPA conventions (ADAPT)
+
+Enable for Vite/React panel apps. Do not `alwaysApply` alongside Next Screaming rules blindly.
+
+## Structure
+
+- `features/<domain>/` — pages, components, hooks, services, store if needed
+- `roles/<role>/` — layout + Outlet only (no domain pages)
+- `app/routes/` — composition only; lazy-load features + role layouts
+- No domain logic / fetching / feature services in `app/` or `roles/`
+- Centralize path constants (links + Route defs)
+
+## Icons (ADAPT bundler)
+
+Prefer SVG-as-component pipeline; `currentColor` when themeable.
+
+## Server state vs client state
+
+- Client-held server data → TanStack Query (see `react-query`) — not Zustand
+- Zustand (or equivalent) → UI/session chrome only
+- Hooks wrap Query; invalidate narrowly after mutations
+
+## UI display (ADAPT locale)
+
+One consistent empty placeholder and date format for the project — do not invent per-feature formats.
+
+## Migration
+
+Frozen modules / out-of-scope lists live in the **project** rule, not this public template.
+
+Skill: `panel-spa-architecture`.

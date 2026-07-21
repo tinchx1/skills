@@ -1,0 +1,14 @@
+---
+description: TanStack Query — keys, hooks-only public API, narrow invalidation
+globs: "**/features/**/{hooks,api,keys}*.{ts,tsx,js,jsx}"
+alwaysApply: false
+---
+
+# TanStack Query (ADAPT: enable only if dependency exists)
+
+- Each feature: `keys` factory, pure `api/` (or `services/`), `hooks/` use cases
+- Components consume hooks only — never `api/` directly
+- Hierarchical array keys; never hardcode keys outside the feature
+- Prefer `setQueryData`; invalidate narrowly — avoid `keys.all` unless necessary
+- Do not mirror Query cache into Zustand
+- Full procedure: `react-query` skill

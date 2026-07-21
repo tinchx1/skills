@@ -1,0 +1,15 @@
+---
+description: SCSS Modules conventions — tokens, mobile-first, feature isolation
+globs: "**/*.{scss,module.scss}"
+alwaysApply: false
+---
+
+# Styling — SCSS Modules (ADAPT)
+
+**Use when:** project styles with SCSS Modules.  
+**Do not use when:** project uses Tailwind (copy `styling-tailwind` instead).
+
+- One module per component folder; co-locate with the component
+- Tokens / variables from shared styles — no one-off hex sprawl in features
+- Mobile-first; avoid deep global selectors into other features
+- Do not invent a parallel Tailwind layer for the same UI

@@ -1,0 +1,32 @@
+---
+description: Screaming Architecture conventions — dependency direction, barrels, naming
+alwaysApply: false
+---
+
+# Project conventions (ADAPT: project name + enable for Screaming apps)
+
+## Dependency direction
+
+- `app/` → `features/` | `shared/` only (`ADAPT:` rename routing root)
+- `features/*` → `shared/` only — **never** another feature
+- `shared/` never imports `features/`
+
+## Public API
+
+- Import features only from `@/features/<domain>` barrels
+- No deep imports into `components/`, `hooks/`, `services/`, or `api/`
+
+## Folders
+
+- Domain logic lives in `features/<domain>/`
+- Cross-cutting UI/utils/client HTTP in `shared/`
+- Create optional subfolders only when needed
+
+## Naming
+
+- Features: `kebab-case` domain folders
+- Components: `PascalCase` folders matching the component name
+
+## Complements
+
+Follow personal/global skills when relevant: `error-handling`, `api-contracts`, `security-engineering`, `verification-loop`.

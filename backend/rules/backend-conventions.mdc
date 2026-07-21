@@ -1,0 +1,14 @@
+---
+description: Backend capability structure — thin HTTP, use cases own behavior
+alwaysApply: false
+---
+
+# Backend conventions (ADAPT: Nest | Express)
+
+Enable for API repos. Organize by capability/module, not by dumping all controllers in one folder.
+
+- Controllers/routes stay thin — call use cases
+- One material operation per use-case file
+- ORM/driver access behind repositories/adapters
+- Map errors once at the HTTP boundary (`error-handling`)
+- Public contracts follow `api-contracts`; authz on concrete resources (`security-engineering`)

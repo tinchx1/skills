@@ -1,0 +1,22 @@
+---
+description: In-control pending feedback via shared Loading for action buttons
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: false
+---
+
+# Loading UX — action buttons (ADAPT)
+
+When an action triggers loading (mutation, submit, save, delete), prefer feedback **inside the same control** using the shared loader.
+
+## Defaults
+
+- In-control only — no global/page loader for button actions unless product requires it
+- Pending content: loader (optionally keep label — ADAPT a11y/brand)
+- Inline size; contrast prop/token for filled buttons (`ADAPT`)
+- `disabled={isLoading}` + `aria-busy` / stable `aria-label`
+
+```jsx
+{isLoading ? <Loading inline /> : <span>Save</span>}
+```
+
+See `loading-ux` skill.

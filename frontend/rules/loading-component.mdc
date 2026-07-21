@@ -1,0 +1,22 @@
+---
+description: Use shared Loading for page/section/Suspense pending UI
+globs: "**/*.{jsx,js,tsx,ts}"
+alwaysApply: false
+---
+
+# Loading states (ADAPT)
+
+For loading UI (full-page, section, Suspense fallback, fetch pending), prefer the shared loader. Do not add ad-hoc spinners or raw “Loading…” blocks when the shared component exists.
+
+**ADAPT import** (example):
+
+```jsx
+import { Loading } from "@/shared/components/Loading";
+```
+
+```jsx
+if (isLoading) return <Loading />;
+<Suspense fallback={<Loading />}>...</Suspense>
+```
+
+Full procedure: `loading-ux` skill.

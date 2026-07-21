@@ -1,0 +1,18 @@
+---
+description: Prefer shared UI primitives from the design-system barrel over one-off controls
+globs: "**/*.{jsx,js,tsx,ts}"
+alwaysApply: false
+---
+
+# Atomic / shared UI (ADAPT)
+
+Use shared components from the project barrel (`ADAPT:` `@/shared/components` or DS package). Do not add one-off `<button>` / raw `<select>` / duplicate chrome when a shared primitive covers the pattern.
+
+Map **roles** to existing exports (button, field, empty, alert, dialog, shell, loader, pagination). Example names vary per design system — sync the list in the project fork.
+
+- Empty lists → shared empty state
+- Loading → shared loader (`loading-ux`)
+- Layout header → layouts only; do not fork in features
+- New shared → folder + styles + barrel export + design tokens
+
+Skill: `atomic-shared-ui`.

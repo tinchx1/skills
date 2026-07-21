@@ -1,0 +1,13 @@
+---
+description: Thin App Router pages — compose features; metadata for public routes
+globs: "**/app/**/page.{jsx,tsx,js,ts}"
+alwaysApply: false
+---
+
+# Next.js pages (ADAPT: enable for App Router)
+
+- Pages are thin: fetch + compose + metadata — no domain UI definitions
+- Import only from `@/features/*` barrels and `@/shared/*`
+- Public routes: export `generateMetadata` or static `metadata` (see `seo-optimization`)
+- Prefer async Server Component pages; push interactivity into feature client children
+- Do not call raw HTTP in the page if a feature service/hook exists

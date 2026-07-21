@@ -1,0 +1,13 @@
+---
+description: Thin HTTP handlers — validate, call use case, map errors once
+globs: "**/*.{controller,route,routes,handler}.{ts,js}"
+alwaysApply: false
+---
+
+# HTTP handlers (ADAPT)
+
+- Validate input at the boundary
+- No ORM calls inside controllers
+- Pass plain objects into use cases — not `req`/`res`
+- Delegate error mapping to central filter/middleware
+- Document status codes and error `code`s for new endpoints

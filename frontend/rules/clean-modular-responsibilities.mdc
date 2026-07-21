@@ -1,0 +1,24 @@
+---
+description: Clean modularity — no inner components/hooks in pages; split by responsibility
+alwaysApply: false
+---
+
+# Clean modularity by responsibility (ADAPT)
+
+## Anti-patterns
+
+- Do not define React components as inner functions inside `pages/` / route files or other components.
+  - OK: tiny helpers returning primitives (no hooks, no JSX tree).
+  - NOT OK: `function Sidebar()` / `const Dialog = () => ...` inside a page/component file.
+- Do not define custom hooks inside feature pages/component files → `features/<domain>/hooks/`.
+- Do not define non-trivial utilities inside pages/components → `features/<domain>/utils/`.
+
+## When to split
+
+- A page exports **one** top-level component: data hooks + state + compose sections.
+- Beyond ~200–250 LOC or 2+ non-trivial UI sections → `features/<domain>/components/`.
+- DOM/event wiring → feature hooks.
+
+`ADAPT:` on Next Screaming apps, apply the same to fat views/screens; on panel SPAs to `features/*/pages/`.
+
+Skill: `clean-modular-responsibilities`.

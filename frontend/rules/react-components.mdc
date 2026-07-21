@@ -1,0 +1,13 @@
+---
+description: React components — RSC default when applicable; keep client leaves small
+globs: "**/*.{jsx,tsx,js,ts}"
+alwaysApply: false
+---
+
+# React components (ADAPT: RSC vs CSR)
+
+- If using RSC: default to Server Components; add `"use client"` only for state, effects, browser APIs, form libs, or Query hooks
+- Keep client components small; fetch in server parents or feature hooks when using Query
+- CSR-only apps: ignore RSC directives; still keep leaves focused
+- Feature components stay under `features/<domain>/components/`
+- Shared atoms/shell under `shared/components/`

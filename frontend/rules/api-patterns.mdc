@@ -1,0 +1,13 @@
+---
+description: Feature services/api pure functions — no UI; map errors at boundary
+globs: "**/features/**/{services,api}/**/*.{js,ts}"
+alwaysApply: false
+---
+
+# API / services patterns (ADAPT)
+
+- Pure functions only — no React hooks, no JSX
+- One use case per file when using TanStack Query `api/` layout
+- Use shared HTTP client from `shared/services` (`ADAPT` path)
+- Do not leak ORM/HTTP internals; align with `error-handling` and `api-contracts`
+- Components must not import these modules when a feature hook exists (Query projects)

@@ -1,0 +1,14 @@
+---
+description: Tailwind conventions — utilities, tokens, cn, no ad-hoc CSS sprawl
+globs: "**/*.{jsx,tsx,js,ts}"
+alwaysApply: false
+---
+
+# Styling — Tailwind (ADAPT)
+
+**Use when:** project styles with Tailwind (v3/v4 — ADAPT config path).  
+**Do not use when:** project uses SCSS Modules (copy `styling-scss` instead).
+
+- Prefer utilities in JSX; extract repeated multi-class patterns via `cn` / `cva` (`ADAPT` helpers)
+- Design tokens live in Tailwind theme/config — no one-off hex in components
+- Do not invent parallel CSS modules / global stylesheets for feature UI unless escaping Tailwind (rare)

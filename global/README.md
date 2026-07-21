@@ -14,6 +14,7 @@ Cross-cutting agent skills used by **both** frontend and backend packs. Copy the
 | `documentation-update` | Keep durable docs aligned after material changes |
 | `agents-md-authoring` | Repo-local `AGENTS.md` structure |
 | `technical-research` | Version-sensitive facts, primary sources |
+| `adr-decision` | When to write ADRs + compact template |
 
 ## How to install
 
